@@ -32,23 +32,8 @@ async function getInfo(url) {
     return {
       status: true,
       result: { 
-        information: {
-            videoId: data.videoId,
-            title: data.title,
-            description: data.description || "Tidak ada deskripsi",
-            viewCount: data.viewCount,
-            likes: data.likes?.count || 0,
-            ownerChannelName: data.ownerChannelName,
-            publishDate: data.publishDate,
-            uploadDate: data.uploadDate,
-          },
-          keywords: data.keywords || [],
-          author: data.author?.name || "Unknown",
-          storyboards: data.storyboards || [],
-          formats: {
-            video: formats.find(f => f.mimeType.includes("video")) || null,
-            audio: formats.find(f => f.mimeType.includes("audio")) || null,
-          },
+        information: hasil.videoDetails, 
+        formats: hasil.formats,
       }
     };
   } catch (err) {
