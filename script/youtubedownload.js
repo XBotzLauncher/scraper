@@ -31,10 +31,8 @@ async function getInfo(url) {
     console.log("Video details fetched successfully");
     return {
       status: true,
-      result: { 
-        information: hasil.videoDetails, 
-        formats: hasil.formats,
-      }
+      information: hasil.videoDetails, 
+      formats: hasil.formats,
     };
   } catch (err) {
     console.error("Error fetching video info:", err.message);
