@@ -1,9 +1,10 @@
-const getInfo = require('../script/youtubedownload.js');
+const savetube = require('../script/youtubedownload.js');
 
 (async () => {
-  const url = `https://youtube.com/shorts/c4f-UWa_X88?si=DL68bceb7gekZ5Jx`;
+  const url = `https://youtu.be/XnNaOO5B_QE?si=aI4tz6VMUVXEvekd`;
+  const format = "8k";
   try {
-    const data = await getInfo(url);
+    const data = await savetube.download(url, format);
     console.log(data)
   } catch (error) {
     console.log(error.message)

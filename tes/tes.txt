@@ -1,0 +1,5 @@
+{
+  "status": false,
+  "code": 500,
+  "error": "Gagal mendekripsi data."
+}
